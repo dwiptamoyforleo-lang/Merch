@@ -1,7 +1,17 @@
-body{
-  filter: blur(6px) brightness(0.65);
-  transition: filter 0.7s ease;
+.bottom-blur{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  pointer-events: none;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: linear-gradient(to top, rgba(11,11,10,0.9), rgba(11,11,10,0));
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
-body.revealed{
-  filter: blur(0) brightness(1);
+.bottom-blur.hidden{
+  opacity: 0;
 }
